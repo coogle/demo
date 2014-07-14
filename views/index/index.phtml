@@ -1,0 +1,28 @@
+<div class="headerContainer"><h1>Colors</h1></div>
+<div class="introContainer">
+	Click on the Color Name to see how many voters for that color.<br/>
+	When you do click on Total, the sum of above numbers will show
+</div>
+
+<div class="votesContainer">
+	<table id="votesTable" data-colors="<?php echo $this->colorList; ?>">
+		<thead>
+			<tr>
+				<th>Color</th>
+				<th>Votes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach($this->colors as $color): ?>
+			<tr>
+				<td><a href="#" onclick="getVotesForColor('<?php echo $this->esc($color); ?>', doLoadingSuccess, doLoadingFailure, doLoadingVotes)"><?php echo $this->esc($color); ?></a></td>
+				<td id="color-<?php echo $this->esc($color); ?>" data-votes="0" class="votes">-</td>
+			</tr>
+			<?php endforeach; ?>
+			<tr>
+				<td><a href="#" onclick="doTotalVotes()">Total</a></td>
+				<td id='votesTotal' class='votes'>-</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

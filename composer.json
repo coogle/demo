@@ -1,0 +1,17 @@
+{
+  "name" : "coogle/skeleton",
+  "description" : "Skeleton Application",
+  "require" : {
+  },
+  "keywords" : [ "framework", "zf2", "skeleton" ],
+  "license" : "BSD-3-Clause",
+    "authors" : [
+    	{
+    		"name" : "John Coggeshall",
+    		"email" : "john@coggeshall.org",
+    		"homepage" : "http://www.coggeshall.org/",
+    		"role" : "Developer"
+    	}
+    ],
+  "homepage" : "http://github.com/coogle/"
+}

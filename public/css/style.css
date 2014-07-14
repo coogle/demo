@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+
+html {
+	font-size : 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+body {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+.introContainer {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.votesContainer {
+	width: 100%;
+}
+
+#votesTable th {
+	background-color: #87cefa;
+}
+
+#votesTable tr:nth-child(even) td {
+	background-color: #d3d3d3;
+}
+
+#votesTable tr:nth-child(odd) td {
+	background-color: #b0c4de;
+}
+
+#votesTable .votes {
+	text-align: center;
+}
+
+#votesTable {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border: thin solid black;
+}
+
+h1 {
+	text-align: center;
+	color: blue;
+	font-size: 10rem;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: blue;
+	text-shadow:
+		3px 3px 0 #000,
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
