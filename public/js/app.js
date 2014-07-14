@@ -1,3 +1,11 @@
+
+/**
+ * Add commas to a number
+ */
+function numberWithCommas(x) {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 /**
  * Calculate the total votes
  */
@@ -15,8 +23,10 @@ function doTotalVotes()
 	colors.forEach(function(color) {
 		voteNode = document.getElementById('color-' + color);
 		
-		totalNode.innerHTML = parseInt(totalNode.innerHTML) + parseInt(voteNode.getAttribute('data-votes'));
-	})
+		total = total + parseInt(voteNode.getAttribute('data-votes'));
+	});
+	
+	totalNode.innerHTML = numberWithCommas(total);
 }
 
 /**
@@ -30,7 +40,7 @@ function doLoadingSuccess(color, votes, xmlHttp)
 {
 	voteNode = document.getElementById('color-' + color);
 	
-	voteNode.innerHTML = votes;
+	voteNode.innerHTML = numberWithCommas(votes);
 	voteNode.setAttribute('data-votes', votes);
 }
 

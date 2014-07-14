@@ -14,4 +14,11 @@ class app::codebase {
     cwd => "/vagrant",
     logoutput => true
   }
+  
+  exec { 'migrate database':
+    command => 'php migrate.php',
+    cwd => '/vagrant',
+    require => [ Class['app::webserver'] ]
+  }
+  
 }

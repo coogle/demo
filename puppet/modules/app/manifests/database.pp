@@ -4,4 +4,10 @@ class app::database {
      root_password => 'password'
   }
    
+  mysql::db { 'demo':
+    user => 'demo',
+    password => 'demo',
+    host => 'localhost'
+  }
+  
 }
