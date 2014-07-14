@@ -20,3 +20,12 @@ $ vagrant up
 
 If you'd like to change the IP you can edit the VagrantConfig.json file in the repository prior to running that command.
 
+The app
+-------
+
+As the app loads in vagrant it's going to take awhile, but here's what it's doing:
+
+ - Initializing the VM
+ - Installing Zend Server Community Edition (php 5.4)
+ - Installing MySQL
+ - Setting up the database through application migrations
